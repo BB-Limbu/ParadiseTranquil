@@ -31,12 +31,25 @@ app.get("/listings",async (req, res) =>{
     res.render("listings/index.ejs", {allListings});
  })
 
+  //New Route
+ app.get("/listings/new", (req, res)=>{
+    res.render("listings/new.ejs");
+ })
+
  //Show route
  app.get("/listings/:id", async(req, res)=>{
     let {id} = req.params;
     const listing = await Listing.findById(id);
     res.render("listings/show.ejs", {listing});
  })
+
+ //Create Route
+ app.post("/listings", async(req, res) =>{
+    //let {title, description, image, price, country, location} = req.body;
+    let listing = await req.body.listing;
+    console.log(listing);
+ })
+
 
 // app.get("/testListing", async(req, res) =>{
 //     let sampleListing = new Listing({
