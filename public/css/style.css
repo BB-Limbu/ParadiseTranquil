@@ -98,5 +98,9 @@ body{
 .edit-btn{
     background-color: #fe424d !important;
     border: none !important;
+}
 
+/*show image */
+.show_img{
+    height: 30vh;
 }
