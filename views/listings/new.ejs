@@ -3,7 +3,7 @@
 <div class="row mt-5">
   <div class="col-8 offset-2">
 <h3>Create a new listing</h3>
-<form method="POST" action="/listings">
+<form method="POST" action="/listings" nonvalidate class="needs-validation">
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
     <input
@@ -11,6 +11,7 @@
       placeholder="Add title"
       type="text"
       class="form-control"
+      required
     />
   </div>
 
@@ -20,6 +21,7 @@
       name="listing[description]"
       class="form-control"
       type="text"
+      required
     ></textarea>
   </div>
 
@@ -41,6 +43,7 @@
       placeholder="enter price e.g. ₹ 1999"
       type="number"
       class="form-control"
+      required
     />
   </div>
 
@@ -51,6 +54,7 @@
       placeholder="enter location e.g. Delhi"
       type="text"
       class="form-control"
+      required
     />
   </div>
     </div>
@@ -62,6 +66,7 @@
       placeholder="enter country e.g. India"
       type="text"
       class="form-control"
+      required
     />
   </div>
 
